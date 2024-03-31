@@ -64,22 +64,15 @@ const images = [
   },
 ];
 
+
+
+import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
+
 const galleryItems = document.querySelector(".gallery");
 galleryItems.innerHTML = createMarkup(images)
-galleryItems.addEventListener('click', function (event) {
-    event.preventDefault()
-  if (event.target.nodeName !== "IMG") { return }
-    const originalImage = event.target.dataset.source
-    console.log(originalImage)
-    const instance = basicLightbox.create(`
-    <img src="${originalImage}" width="800" height="600">
-`)
-    instance.show()
-});
-
-
 function createMarkup(arr) {
-    return arr.map(({preview, original, description}) => `<li class="gallery-item">
+  return arr.map(({ preview, original, description }) => `<li class="gallery-item">
   <a class="gallery-link" href="${original}">
     <img
       class="gallery-image"
@@ -89,3 +82,34 @@ function createMarkup(arr) {
   </a>
 </li>`).join("")
 }
+  
+const lightbox = new SimpleLightbox('.gallery', { 
+  captionsData: 'alt',
+  captionDelay: 250,
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// galleryItems.addEventListener('click', function (event) {
+//     event.preventDefault()
+//   if (event.target.nodeName !== "IMG") { return }
+//     const originalImage = event.target.dataset.source
+//     console.log(originalImage)
+//     const instance = basicLightbox.create(`
+//     <img src="${originalImage}" width="800" height="600">
+// `)
+//     instance.show()
+// });
+
+
