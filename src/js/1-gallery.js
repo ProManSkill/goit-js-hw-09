@@ -1,5 +1,5 @@
 
-import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
@@ -86,10 +86,10 @@ function createMarkup(arr) {
       alt="${description}"
     />
   </a>
-</li>`).join("")
+</li>`).join("");
 };
   
-const lightbox = new SimpleLightbox('.gallery', { 
+const lightbox = new SimpleLightbox('.gallery a', { 
   captionsData: 'alt',
   captionDelay: 250,
 });
