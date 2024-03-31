@@ -55,3 +55,16 @@
   width: 360px;
   height: 200px;
 }
+
+.feedback-form {
+display: flex;
+flex-direction: column;
+  gap: 8px;
+  width: 408px;
+    height: 256px;
+ 
+    padding: 24px 0px 0px 0px;
+    gap: 16px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+}
