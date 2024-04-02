@@ -24,7 +24,7 @@ form.addEventListener('input', event => {
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  if (email.value == '' || message.value == '') {
+  if (email.value === '' || message.value === '') {
     return alert('All form fields must be filled in');
   }
   const formData = {

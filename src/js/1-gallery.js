@@ -109,17 +109,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 
 
-
-
-// galleryItems.addEventListener('click', function (event) {
-//     event.preventDefault()
-//   if (event.target.nodeName !== "IMG") { return }
-//     const originalImage = event.target.dataset.source
-//     console.log(originalImage)
-//     const instance = basicLightbox.create(`
-//     <img src="${originalImage}" width="800" height="600">
-// `)
-//     instance.show()
-// });
-
-
